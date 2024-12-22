@@ -1,5 +1,5 @@
 import { yarg } from '../src/config/plugins/yargs.plugin'
-import { ServerApp } from './presentacion/server.app';
+import { ServerApp } from './presentacion/serverApp';
 
 // console.log(process.argv)
 // console.log(yarg)
@@ -10,7 +10,7 @@ import { ServerApp } from './presentacion/server.app';
 })()
 
 async function main() {
-    const { b: base, l: limit, s: showTable, d: destination, n: name } = yarg
+    const { b: base, l: limit, s: showTable, d: fileDestination, n: fileName } = yarg
     console.log({yarg})
-    ServerApp.run({ base, limit, showTable, name, destination })
+    ServerApp.run({ base, limit, showTable, fileName, fileDestination })
 }

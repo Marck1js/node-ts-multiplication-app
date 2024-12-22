@@ -1,5 +1,7 @@
 import yargs from 'yargs/yargs'
 import { hideBin } from 'yargs/helpers'
+import { checkOptions } from './check-yargs.plugin';
+
 
 export const yarg = yargs(hideBin(process.argv))
     .option('b', {
@@ -33,4 +35,5 @@ export const yarg = yargs(hideBin(process.argv))
         default: 'outputs',
         description: 'File destination'
     })
+    .check(checkOptions)
     .parseSync()
