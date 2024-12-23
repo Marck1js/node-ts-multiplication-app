@@ -28,8 +28,8 @@ export class ServerApp {
 
     if (showTable) console.log(table);
 
-    wasCreated
-      ? console.log("File Created sucessfully")
+    (wasCreated)
+      ? console.log("File Created Sucessfully")
       : console.log("Error creating file");
   }
 }
